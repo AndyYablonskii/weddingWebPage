@@ -1,0 +1,9 @@
+@media (min-width: 1024px) {
+  .faq-background {
+    padding-left: 120px !important;
+    padding-right: 120px !important;
+  }
+  .MuiAccordion-root {
+    font-size: 22px;
+  }
+}

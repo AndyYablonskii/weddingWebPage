@@ -1,0 +1,78 @@
+.ractangleDesktop {
+  display: none !important;
+}
+
+@media (max-wight:600px) {
+
+  .addGaps {
+
+
+display: flex;
+padding-top: 40px;
+padding-bottom: 67px;
+display: flex;
+flex-direction: row;
+gap: 12px;
+justify-content: center;
+
+  }
+
+}
+
+
+
+
+
+
+@media (min-width: 992px) {
+  div .hideImg {
+    display: none !important;
+  }
+
+  .ractangleDesktop {
+    display: flex !important;
+  }
+
+  .title {
+
+    font-family: 'Playfair Display', serif;
+    size: 60px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0%;
+  }
+
+  .ractangleMobile {
+    display: none !important;
+  }
+
+  .request {
+    size: 25px;
+    font-weight: 400;
+    line-height: 26px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .addGaps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+
+
+
+}
+
+@media (min-width: 1024px) {
+  .colors-title {
+    font-size: 48px;
+    padding-top: 80px;
+  }
+
+  .colors-row {
+    gap: 32px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}

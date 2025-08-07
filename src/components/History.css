@@ -1,0 +1,30 @@
+@media (min-wight:600px) {
+  .ractangleMobile{
+    padding: auto;
+  }
+}
+
+
+
+
+
+@media (min-width: 992px) {
+  .history-title {
+    font-size: 48px;
+    padding-top: 100px;
+  }
+  .history-content {
+    font-size: 24px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .ractangleDesktop {
+    display: none !important;
+  
+  }
+  .history{
+padding-top: 38px;
+
+  }
+  
+}
