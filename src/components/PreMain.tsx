@@ -1,25 +1,27 @@
 import React from "react";
+import { COLORS } from "../constants/index.ts";
 import './PreMainStyle.css';
 
-export const PreMain = () => {
-    return (
-<div className="premainDesktop">
-<div style={{
-    backgroundColor:' rgba(248, 244, 237, 1)',
-    display:' flex',
-  textAlign:'center',
-  color: 'rgba(74, 90, 59, 1)',
-  paddingTop:'27px',
-  paddingLeft:'51px',
-  paddingRight:'49px',
+const containerStyle: React.CSSProperties = {
+  backgroundColor: COLORS.background,
+  display: 'flex',
+  textAlign: 'center',
+  color: COLORS.primary,
+  paddingTop: '27px',
+  paddingLeft: '51px',
+  paddingRight: '49px',
   paddingBottom: '20px',
-  fontSize:'24px'
-}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-     porro ex, <br />
-     magni dolorum corporis neque blanditiis exercitationem adipisci.
-</div>
-</div>
+  fontSize: '24px'
+};
 
-
-)
-}
+export const PreMain: React.FC = () => {
+  return (
+    <div className="premainDesktop">
+      <div style={containerStyle}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+        porro ex, <br />
+        magni dolorum corporis neque blanditiis exercitationem adipisci.
+      </div>
+    </div>
+  );
+};
