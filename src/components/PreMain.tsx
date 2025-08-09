@@ -3,13 +3,15 @@ import { COLORS } from "../constants/index.ts";
 import './PreMainStyle.css';
 
 const containerStyle: React.CSSProperties = {
-  backgroundColor: COLORS.background,
+  backgroundColor: COLORS.darkBrown,
   display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   textAlign: 'center',
-  color: COLORS.primary,
-  paddingTop: '27px',
-  paddingLeft: '51px',
-  paddingRight: '49px',
+  color: COLORS.background,
+  paddingTop: '20px',
+  paddingLeft: '50px',
+  paddingRight: '50px',
   paddingBottom: '20px',
   fontSize: '24px'
 };
@@ -18,9 +20,10 @@ export const PreMain: React.FC = () => {
   return (
     <div className="premainDesktop">
       <div style={containerStyle}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-        porro ex, <br />
-        magni dolorum corporis neque blanditiis exercitationem adipisci.
+        Surging waters cannot quench love, floodwaters cannot overflow it
+      </div>
+      <div style={containerStyle}>
+        Song of Solomon 8:7
       </div>
     </div>
   );

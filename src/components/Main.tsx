@@ -13,40 +13,43 @@ interface EventSectionProps {
     title: string;
     location: string;
     time: string;
-    paddingTop?: string;
 }
 
 const backgroundStyle: React.CSSProperties = {
-    height: '100dvh',
+    minHeight: '100dvh',
     width: '100%',
     backgroundImage: `url(${Invitation})`,
-    position: "relative",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    paddingTop: '85px',
+    paddingBottom: '40px',
 };
 
 const titleStyle: React.CSSProperties = {
-    display: 'flex',
-    justifySelf: 'center',
-    paddingTop: '85px',
     fontSize: '35px',
     fontWeight: 400,
-    color: COLORS.primary
+    color: COLORS.primary,
+    textAlign: 'center',
+    margin: 0,
+    marginBottom: '36px',
 };
 
 const rectangleMobileStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
-    paddingTop: '36px',
     color: COLORS.accent,
+    marginBottom: '40px',
 };
 
 const rectangleDesktopStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
-    paddingTop: '26px',
     color: COLORS.accent,
+    marginBottom: '40px',
 };
 
 const buttonStyle: React.CSSProperties = {
@@ -58,75 +61,95 @@ const buttonStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '0 auto',
+    marginTop: '32px',
     borderRadius: '30px',
     boxShadow: 'none',
     border: 'none',
-    outline: 'none'
+    outline: 'none',
+    cursor: 'pointer',
+};
+
+const eventSectionContainerStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    borderRadius: '12px',
+    padding: '24px',
+    margin: '16px 0',
+    maxWidth: '400px',
+    width: '100%',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+};
+
+const eventHeaderStyle: React.CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '16px',
+    marginBottom: '16px',
+};
+
+const eventTitleStyle: React.CSSProperties = {
+    fontSize: '30px',
+    color: COLORS.primary,
+    margin: 0,
+    fontWeight: 'bold',
+};
+
+const eventDetailStyle: React.CSSProperties = {
+    fontSize: '16px',
+    color: COLORS.primary,
+    margin: '8px 0',
+    display: 'flex',
+    alignItems: 'center',
+};
+
+const eventLinkStyle: React.CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '8px',
+    marginTop: '8px',
+    textDecoration: 'none',
 };
 
 const EventSection: React.FC<EventSectionProps> = ({
     icon,
     title,
     location,
-    time,
-    paddingTop = '0px'
+    time
 }) => (
-    <>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <div style={eventSectionContainerStyle}>
+        <div style={eventHeaderStyle}>
             <img
-                style={{ paddingLeft: '70px', paddingTop }}
                 src={icon}
                 alt={`${title} icon`}
+                style={{ width: '40px', height: '40px' }}
             />
-            <div style={{
-                fontSize: '30px',
-                paddingLeft: paddingTop ? '15px' : '12px',
-                paddingTop: paddingTop ? '40px' : '28px',
-                color: COLORS.primary
-            }}>
-                {title}
-            </div>
+            <h3 style={eventTitleStyle}>{title}</h3>
         </div>
-
-        <div style={{
-            paddingLeft: '68px',
-            paddingTop: '17px',
-            fontSize: '16px',
-            color: COLORS.primary,
-        }}>
+        
+        <div style={eventDetailStyle}>
             <b>Локація: </b>{location}
         </div>
 
-        <div style={{
-            paddingLeft: '68px',
-            paddingTop: '16px',
-            fontSize: '16px',
-            color: COLORS.primary,
-        }}>
+        <div style={eventDetailStyle}>
             <b>Час: </b>{time}
         </div>
 
-        <div style={{ display: 'flex' }}>
+        <a
+            style={{...eventLinkStyle, color: COLORS.primary}}
+            href={LOCATIONS.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             <img
                 src={Link}
-                style={{ paddingLeft: '70px', paddingTop: '16px' }}
                 alt="Link icon"
+                style={{ width: '16px', height: '16px' }}
             />
-            <a
-                style={{
-                    color: COLORS.primary,
-                    paddingLeft: '7px',
-                    paddingTop: '17px',
-                }}
-                href={LOCATIONS.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <b>Google Maps</b>
-            </a>
-        </div>
-    </>
+            <b>Google Maps</b>
+        </a>
+    </div>
 );
 
 export const Main: React.FC = () => {
@@ -161,10 +184,7 @@ export const Main: React.FC = () => {
                 title="Бенкет"
                 location={LOCATIONS.reception}
                 time="14:00-20:00"
-                paddingTop="81px"
             />
-
-            <div style={{ marginBottom: '30px' }} />
 
             <button
                 className="btn"

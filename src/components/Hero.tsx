@@ -7,71 +7,80 @@ import "./HeroStyle.css";
 const heroContainerStyle: React.CSSProperties = {
   width: "100%",
   height: "100dvh",
-  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
   backgroundImage: `url(${heroImg})`,
   backgroundSize: "cover",
-  backgroundPosition: "center",
+  backgroundPosition: "top center",
   backgroundRepeat: "no-repeat",
+  position: "relative",
 };
 
 const overlayStyle: React.CSSProperties = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: "100%",
-  height: "100%",
+  right: 0,
+  bottom: 0,
   backgroundColor: "rgba(209, 215, 205, 0.3)",
   zIndex: 1,
 };
 
+const contentContainerStyle: React.CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  zIndex: 2,
+  textAlign: "center",
+};
+
 const frameStyle: React.CSSProperties = {
   display: 'flex',
-  justifySelf: 'center',
-  position: 'center',
-  zIndex: 3,
-  paddingTop: '580px',
+  justifyContent: 'center',
+  alignItems: 'center',
 };
 
 const coupleNameStyle: React.CSSProperties = {
   fontFamily: 'Playfair Display',
   fontWeight: 900,
   fontStyle: 'normal',
-  display: 'flex',
-  justifySelf: 'center',
-  position: 'center',
   lineHeight: '40px',
   fontSize: '36px',
-  color: 'rgba(248, 244, 237, 1)'
+  color: 'rgba(248, 244, 237, 1)',
+  margin: 0,
 };
 
 const lineStyle: React.CSSProperties = {
-  display: 'flex',
-  position: 'center',
-  justifySelf: 'center',
-  color: 'rgba(248, 244, 237, 1)'
+  color: 'rgba(248, 244, 237, 1)',
+  fontSize: '24px',
+  margin: 0,
 };
 
 const dateStyle: React.CSSProperties = {
-  display: 'flex',
-  justifySelf: 'center',
-  paddingTop: '44px',
   color: 'rgba(248, 244, 237, 1)',
   fontFamily: 'Cormorant Garamond',
-  fontSize: '20px'
+  fontSize: '20px',
+  margin: 0,
 };
 
 export const Hero: React.FC = () => {
   return (
     <div className="container" style={heroContainerStyle}>
-      <div className="zIndexForImg" style={overlayStyle} />
-      <div className="heroContent">
+      {/* Mobile overlay - shown only on mobile */}
+      <div className="mobile-overlay" style={overlayStyle} />
+      
+      {/* Mobile hero content */}
+      <div className="heroContent" style={contentContainerStyle}>
         <img
           className="frameSvg"
           src={frameSvg}
           alt="Decorative frame"
           style={frameStyle}
         />
-        <div className="Andrew & Sofia" style={coupleNameStyle}>
+        <div className="couple-name" style={coupleNameStyle}>
           Andrew & Sofia
         </div>
         <div className="line" style={lineStyle}>
@@ -79,6 +88,28 @@ export const Hero: React.FC = () => {
         </div>
         <div className="Date" style={dateStyle}>
           {WEDDING_DATE_DISPLAY}
+        </div>
+      </div>
+      
+      {/* Desktop layout - hidden on mobile */}
+      <div className="desktop-hero">
+        <img
+          className="desktop-hero-img"
+          src={heroImg}
+          alt="Andrew and Sofia"
+        />
+        <div className="desktop-hero-text">
+          <img
+            className="desktop-decorative"
+            src={frameSvg}
+            alt="Decorative flourish"
+          />
+          <div className="desktop-title">
+            <div className="desktop-name">Andrew</div>
+            <div className="desktop-ampersand">&</div>
+            <div className="desktop-name">Sofia</div>
+          </div>
+          <div className="desktop-date">{WEDDING_DATE_DISPLAY}</div>
         </div>
       </div>
     </div>
