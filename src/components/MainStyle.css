@@ -1,6 +1,32 @@
-.Invite{
-font-family: 'Playfair Display', serif;
+.Invite {
+    font-family: var(--font-heading);
 }
+
 .ractangleDesktop {
     display: none !important;
-  }
+}
+
+.ractangleMobile {
+    /* Default mobile styles */
+}
+
+.backgroundImg {
+    /* Background image container */
+}
+
+/* Mobile first responsive breakpoints */
+@media (max-width: 600px) {
+    .ractangleDesktop {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .ractangleDesktop {
+        display: flex !important;
+    }
+    
+    .ractangleMobile {
+        display: none !important;
+    }
+}

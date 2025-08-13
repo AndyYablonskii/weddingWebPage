@@ -28,7 +28,7 @@ const containerStyle: React.CSSProperties = {
 };
 
 const titleStyle: React.CSSProperties = {
-  fontFamily: 'Playfair Display, serif',
+  fontFamily: 'var(--font-hero)',
   fontSize: '36px',
   color: '#fff',
   textAlign: 'center',
@@ -39,7 +39,7 @@ const valueStyle: React.CSSProperties = {
   display: 'flex',
   alignItems: 'flex-end',
   justifyContent: 'center',
-  fontFamily: 'Playfair Display, serif',
+  fontFamily: 'var(--font-hero)',
   fontSize: '64px',
   color: '#fff',
   margin: '0 0 0 0',
@@ -49,7 +49,7 @@ const labelsStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'center',
   gap: '20px',
-  fontFamily: 'Playfair Display, serif',
+  fontFamily: 'var(--font-hero)',
   fontSize: '18px',
   color: '#fff',
   marginTop: '8px',

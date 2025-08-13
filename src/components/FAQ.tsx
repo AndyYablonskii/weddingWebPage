@@ -57,7 +57,7 @@ const titleStyle: React.CSSProperties = {
     textAlign: 'center',
     color: COLORS.primary,
     marginBottom: '16px',
-    fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    fontFamily: 'var(--font-body)'
 };
 
 const dividerStyle: React.CSSProperties = {
@@ -86,7 +86,7 @@ const questionButtonStyle: React.CSSProperties = {
     fontWeight: 500,
     color: COLORS.primary,
     textAlign: 'left',
-    fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    fontFamily: 'var(--font-body)',
     outline: 'none'
 };
 
@@ -110,7 +110,7 @@ const answerStyle: React.CSSProperties = {
     fontSize: '16px',
     lineHeight: '1.6',
     color: '#666',
-    fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+    fontFamily: 'var(--font-body)'
 };
 
 const mobileStyles = `

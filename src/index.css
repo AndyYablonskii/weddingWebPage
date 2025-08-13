@@ -1,13 +1,56 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+
+/* CSS Custom Properties for Font Management */
+:root {
+  /* Font Family Variables */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Playfair Display', serif;
+  --font-hero: 'Playfair Display', serif;
+  --font-accent: 'Playfair Display', serif;
+  --font-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  
+  /* Font Weight Variables */
+  --font-weight-light: 400;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 900;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--font-code);
+}
+
+/* Reusable Line Components */
+.decorative-line {
+  height: 2px;
+  background-color: var(--color-accent, rgba(201, 203, 163, 1));
+  border: none;
+  margin: 0;
+  border-radius: 1px;
+}
+
+.decorative-line--short {
+  width: 80px;
+}
+
+.decorative-line--long {
+  width: 200px;
+}
+
+.decorative-line--responsive {
+  width: 80px;
+}
+
+@media (min-width: 992px) {
+  .decorative-line--responsive {
+    width: 200px;
+  }
 }

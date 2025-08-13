@@ -43,7 +43,7 @@ export const Timer = () => {
       padding: '40px 0',
     }}>
       <div style={{
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'var(--font-hero)',
         fontSize: '36px',
         color: '#fff',
         textAlign: 'center',
@@ -55,7 +55,7 @@ export const Timer = () => {
         display: 'flex',
         alignItems: 'flex-end',
         justifyContent: 'center',
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'var(--font-hero)',
         fontSize: '48px',
         color: '#fff',
         margin: '0 0 0 0',
@@ -66,7 +66,7 @@ export const Timer = () => {
         display: 'flex',
         justifyContent: 'center',
         gap: '48px',
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'var(--font-hero)',
         fontSize: '18px',
         color: '#fff',
         marginTop: '8px',

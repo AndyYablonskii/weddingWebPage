@@ -1,58 +1,106 @@
-// src/components/Main.tsx
 import React from "react";
 import { COLORS, LOCATIONS } from "../constants/index.ts";
-import { createGoogleCalendarUrl } from "../utills/callendar.ts";
 import Invitation from "../assets/Invitation.png";
 import Church from "../assets/church.svg";
 import Link from "../assets/link-svg.svg";
 import Dinner from "../assets/Dinner.svg";
-import "./MainStyle.css";
+import './MainStyle.css';
 
-interface EventSectionProps {
-    icon: string;
-    title: string;
-    location: string;
-    time: string;
-}
 
-const backgroundStyle: React.CSSProperties = {
-    minHeight: '100dvh',
+const backgroundImageStyle: React.CSSProperties = {
+    height: '100dvh',
     width: '100%',
     backgroundImage: `url(${Invitation})`,
+    position: "relative",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    paddingTop: '85px',
-    paddingBottom: '40px',
 };
 
-const titleStyle: React.CSSProperties = {
+const scheduleHeadingStyle: React.CSSProperties = {
+    display: 'flex',
+    justifySelf: 'center',
+    paddingTop: '85px',
     fontSize: '35px',
     fontWeight: 400,
+    color: COLORS.primary
+};
+
+const rectangleLineStyle: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'center',
+    paddingTop: '36px',
+};
+
+const rectangleDesktopLineStyle: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'center',
+    paddingTop: '26px',
+};
+
+const eventSectionStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'row'
+};
+
+const eventIconStyle: React.CSSProperties = {
+    paddingLeft: '70px'
+};
+
+const eventTitleStyle: React.CSSProperties = {
+    fontSize: '30px',
+    paddingLeft: '12px',
+    paddingTop: '28px',
+    color: COLORS.primary
+};
+
+const eventDetailsStyle: React.CSSProperties = {
+    paddingLeft: '68px',
+    paddingTop: '17px',
+    fontSize: '16px',
     color: COLORS.primary,
-    textAlign: 'center',
-    margin: 0,
-    marginBottom: '36px',
 };
 
-const rectangleMobileStyle: React.CSSProperties = {
+const eventTimeStyle: React.CSSProperties = {
+    paddingLeft: '68px',
+    paddingTop: '16px',
+    fontSize: '16px',
+    color: COLORS.primary,
+};
+
+const linkContainerStyle: React.CSSProperties = {
     display: 'flex',
-    justifyContent: 'center',
-    color: COLORS.accent,
-    marginBottom: '40px',
 };
 
-const rectangleDesktopStyle: React.CSSProperties = {
+const linkIconStyle: React.CSSProperties = {
+    paddingLeft: '70px',
+    paddingTop: '16px',
+};
+
+const linkStyle: React.CSSProperties = {
+    color: COLORS.primary,
+    paddingLeft: '7px',
+    paddingTop: '17px',
+};
+
+const banquetIconStyle: React.CSSProperties = {
+    paddingTop: '81px',
+    paddingLeft: '70px'
+};
+
+const banquetTitleStyle: React.CSSProperties = {
+    fontSize: '30px',
+    paddingLeft: '15px',
+    paddingTop: '121px',
+    color: COLORS.primary
+};
+
+const finalLinkContainerStyle: React.CSSProperties = {
     display: 'flex',
-    justifyContent: 'center',
-    color: COLORS.accent,
-    marginBottom: '40px',
+    marginBottom: '30px',
 };
 
-const buttonStyle: React.CSSProperties = {
+const calendarButtonStyle: React.CSSProperties = {
     height: '60px',
     width: '300px',
     fontSize: '18px',
@@ -61,138 +109,82 @@ const buttonStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: '32px',
+    margin: '0 auto',
     borderRadius: '30px',
     boxShadow: 'none',
     border: 'none',
-    outline: 'none',
-    cursor: 'pointer',
+    outline: 'none'
 };
 
-const eventSectionContainerStyle: React.CSSProperties = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-    borderRadius: '12px',
-    padding: '24px',
-    margin: '16px 0',
-    maxWidth: '400px',
-    width: '100%',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+const createGoogleCalendarEvent = () => {
+    const url = new URL("https://calendar.google.com/calendar/render");
+    url.searchParams.set("action", "TEMPLATE");
+    url.searchParams.set("text", "Наше весілля 💍");
+    url.searchParams.set("details", "Запрошуємо вас розділити з нами цей особливий день!");
+    url.searchParams.set("location", "пров.Шкільний 2а, с.Хутори");
+    url.searchParams.set("dates", "20251004T140000Z/20251004T170000Z");
+    window.open(url.toString(), "_blank");
 };
 
-const eventHeaderStyle: React.CSSProperties = {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '16px',
-    marginBottom: '16px',
-};
-
-const eventTitleStyle: React.CSSProperties = {
-    fontSize: '30px',
-    color: COLORS.primary,
-    margin: 0,
-    fontWeight: 'bold',
-};
-
-const eventDetailStyle: React.CSSProperties = {
-    fontSize: '16px',
-    color: COLORS.primary,
-    margin: '8px 0',
-    display: 'flex',
-    alignItems: 'center',
-};
-
-const eventLinkStyle: React.CSSProperties = {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
-    marginTop: '8px',
-    textDecoration: 'none',
-};
-
-const EventSection: React.FC<EventSectionProps> = ({
-    icon,
-    title,
-    location,
-    time
-}) => (
-    <div style={eventSectionContainerStyle}>
-        <div style={eventHeaderStyle}>
-            <img
-                src={icon}
-                alt={`${title} icon`}
-                style={{ width: '40px', height: '40px' }}
-            />
-            <h3 style={eventTitleStyle}>{title}</h3>
-        </div>
-        
-        <div style={eventDetailStyle}>
-            <b>Локація: </b>{location}
-        </div>
-
-        <div style={eventDetailStyle}>
-            <b>Час: </b>{time}
-        </div>
-
-        <a
-            style={{...eventLinkStyle, color: COLORS.primary}}
-            href={LOCATIONS.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <img
-                src={Link}
-                alt="Link icon"
-                style={{ width: '16px', height: '16px' }}
-            />
-            <b>Google Maps</b>
-        </a>
-    </div>
-);
-
-export const Main: React.FC = () => {
-    const handleAddToCalendar = (): void => {
-        const url = createGoogleCalendarUrl();
-        window.open(url, "_blank");
-    };
-
+export const Main = () => {
     return (
-        <div className="backgroundImg" style={backgroundStyle}>
-            <div className="Invite" style={titleStyle}>
-                Розклад весілля
+        <>
+            <div className="backgroundImg" style={backgroundImageStyle}>
+                <div className="Invite" style={scheduleHeadingStyle}>Розклад весілля</div>
+                
+                <div className="ractangleMobile" style={rectangleLineStyle}>
+                    <hr className="decorative-line decorative-line--short" style={{ backgroundColor: COLORS.accent }} />
+                </div>
+
+                <div className="ractangleDesktop" style={rectangleDesktopLineStyle}>
+                    <hr className="decorative-line decorative-line--long" style={{ backgroundColor: COLORS.accent }} />
+                </div>
+
+                <div style={eventSectionStyle}>
+                    <img style={eventIconStyle} src={Church} alt="Church ceremony icon" />
+                    <div style={eventTitleStyle}>Церемонія вінчання</div>
+                </div>
+                
+                <div style={eventDetailsStyle}>
+                    <b>Локація: </b>{LOCATIONS.ceremony}
+                </div>
+                
+                <div style={eventTimeStyle}>
+                    <b>Час: </b>14:00
+                </div>
+                
+                <div style={linkContainerStyle}>
+                    <img src={Link} style={linkIconStyle} alt="Link icon" />
+                    <a style={linkStyle} href={LOCATIONS.mapsUrl} target="_blank" rel="noopener noreferrer">
+                        <b> Google Maps</b>
+                    </a>
+                </div>
+
+                <div style={eventSectionStyle}>
+                    <img style={banquetIconStyle} src={Dinner} alt="Dinner reception icon" />
+                    <div style={banquetTitleStyle}>Бенкет</div>
+                </div>
+                
+                <div style={eventDetailsStyle}>
+                    <b>Локація: </b>{LOCATIONS.reception}
+                </div>
+                
+                <div style={eventTimeStyle}>
+                    <b>Час: </b>14:00-20:00
+                </div>
+
+                <div style={finalLinkContainerStyle}>
+                    <img src={Link} style={linkIconStyle} alt="Link icon" />
+                    <a style={linkStyle} href={LOCATIONS.mapsUrl} target="_blank" rel="noopener noreferrer">
+                        <b> Google Maps</b>
+                    </a>
+                </div>
+
+                <button className="btn" style={calendarButtonStyle} onClick={createGoogleCalendarEvent}>
+                    Додати в Google Календар
+                </button>
+
             </div>
-
-            <div className="ractangleMobile" style={rectangleMobileStyle}>
-                ______
-            </div>
-
-            <div className="ractangleDesktop" style={rectangleDesktopStyle}>
-                ________________________
-            </div>
-
-            <EventSection
-                icon={Church}
-                title="Церемонія вінчання"
-                location={LOCATIONS.ceremony}
-                time="14:00"
-            />
-
-            <EventSection
-                icon={Dinner}
-                title="Бенкет"
-                location={LOCATIONS.reception}
-                time="14:00-20:00"
-            />
-
-            <button
-                className="btn"
-                style={buttonStyle}
-                onClick={handleAddToCalendar}
-            >
-                Додати в Google Календар
-            </button>
-        </div>
-    );
-};
+        </>
+    )
+}   

@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+/* Font import now handled in index.css */
 
 .playfair-display-main-title {
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-hero);
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
 }
 
 .Date {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-hero);
 }
 
 /* Mobile-first: heroContent should display flex by default */
@@ -63,7 +63,7 @@
 
     top: 300px;
 
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-hero);
     font-size: 40px;
     font-weight: 900;
     font-style: normal;
@@ -131,7 +131,7 @@
   }
 
   .desktop-name {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-hero);
     font-size: 5rem;
     font-weight: 700;
     color: #495a3b;
@@ -140,7 +140,7 @@
   }
 
   .desktop-ampersand {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-hero);
     font-size: 4rem;
     font-weight: 400;
     color: #495a3b;
@@ -149,7 +149,7 @@
   }
 
   .desktop-date {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-hero);
     font-size: 1rem;
     color: #495a3b;
     font-weight: 400;

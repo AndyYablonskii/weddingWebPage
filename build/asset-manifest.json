@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.99e13bbf.css",
+    "main.js": "/static/js/main.f6a10d77.js",
+    "static/media/Hero.png": "/static/media/Hero.eb7813ebb0c79ed5b0da.png",
+    "static/media/Invitation.png": "/static/media/Invitation.7c21af2c149e72b24901.png",
+    "static/media/img.png": "/static/media/img.3ae6435e172fa1c0d469.png",
+    "static/media/link-svg.svg": "/static/media/link-svg.a32e063d8e661b5df48f14b9585adf05.svg",
+    "static/media/Dinner.svg": "/static/media/Dinner.87b2fac5c0ed4824171fd6f579aa8a16.svg",
+    "static/media/church.svg": "/static/media/church.43fb09a9a7afefc15d0d3a2f6a91678a.svg",
+    "index.html": "/index.html",
+    "static/media/Frame.svg": "/static/media/Frame.5ccb547bc82738a5a4c545da3a78ff94.svg",
+    "static/media/Frame2.svg": "/static/media/Frame2.04347ea5975ac5c16376cdf9bd53fce8.svg",
+    "main.99e13bbf.css.map": "/static/css/main.99e13bbf.css.map",
+    "main.f6a10d77.js.map": "/static/js/main.f6a10d77.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.99e13bbf.css",
+    "static/js/main.f6a10d77.js"
+  ]
+}

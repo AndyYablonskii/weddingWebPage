@@ -44,7 +44,7 @@ const frameStyle: React.CSSProperties = {
 };
 
 const coupleNameStyle: React.CSSProperties = {
-  fontFamily: 'Playfair Display',
+  fontFamily: 'var(--font-hero)',
   fontWeight: 900,
   fontStyle: 'normal',
   lineHeight: '40px',
@@ -54,14 +54,14 @@ const coupleNameStyle: React.CSSProperties = {
 };
 
 const lineStyle: React.CSSProperties = {
-  color: 'rgba(248, 244, 237, 1)',
-  fontSize: '24px',
-  margin: 0,
+  display: 'flex',
+  justifyContent: 'center',
+  margin: '16px 0',
 };
 
 const dateStyle: React.CSSProperties = {
   color: 'rgba(248, 244, 237, 1)',
-  fontFamily: 'Cormorant Garamond',
+  fontFamily: 'var(--font-accent)',
   fontSize: '20px',
   margin: 0,
 };
@@ -84,7 +84,7 @@ export const Hero: React.FC = () => {
           Andrew & Sofia
         </div>
         <div className="line" style={lineStyle}>
-          _________
+          <hr className="decorative-line decorative-line--short" style={{ backgroundColor: 'rgba(248, 244, 237, 1)' }} />
         </div>
         <div className="Date" style={dateStyle}>
           {WEDDING_DATE_DISPLAY}

@@ -17,15 +17,14 @@ const titleStyle: React.CSSProperties = {
 
 const rectangleMobileStyle: React.CSSProperties = {
     display: 'flex',
+    justifyContent: 'center',
     paddingTop: '20px',
-    color: COLORS.accent,
 };
 
 const rectangleDesktopStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     paddingTop: '26px',
-    color: COLORS.accent,
 };
 
 const historyTextStyle: React.CSSProperties = {
@@ -44,11 +43,11 @@ export const History: React.FC = () => {
             <span style={titleStyle}>Наша Історія</span>
 
             <div className="ractangleMobile" style={rectangleMobileStyle}>
-                ______
+                <hr className="decorative-line decorative-line--short" style={{ backgroundColor: COLORS.accent }} />
             </div>
 
             <div className="ractangleDesktop" style={rectangleDesktopStyle}>
-                ________________________
+                <hr className="decorative-line decorative-line--long" style={{ backgroundColor: COLORS.accent }} />
             </div>
 
             <div className="history" style={historyTextStyle}>

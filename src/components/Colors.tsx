@@ -37,14 +37,12 @@ const rectangleMobileStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     paddingTop: '26px',
-    color: COLORS.accent,
 };
 
 const rectangleDesktopStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     paddingTop: '26px',
-    color: COLORS.accent,
 };
 
 const requestStyle: React.CSSProperties = {
@@ -89,11 +87,11 @@ export const Colors: React.FC = () => {
                 </div>
 
                 <div className="ractangleMobile" style={rectangleMobileStyle}>
-                    ______
+                    <hr className="decorative-line decorative-line--short" style={{ backgroundColor: COLORS.accent }} />
                 </div>
 
                 <div className="ractangleDesktop" style={rectangleDesktopStyle}>
-                    ________________________
+                    <hr className="decorative-line decorative-line--long" style={{ backgroundColor: COLORS.accent }} />
                 </div>
 
                 <span className="request" style={requestStyle}>
