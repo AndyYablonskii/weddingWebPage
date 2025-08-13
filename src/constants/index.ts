@@ -4,6 +4,7 @@ export const WEDDING_DATE_DISPLAY = "04.10.2025";
 export const COLORS = {
     primary: "rgba(73, 90, 59, 1)",
     secondary: "rgba(90, 98, 70, 1)",
+    tertiary: "#809671",
     accent: "rgba(201, 203, 163, 1)",
     background: "rgba(248, 244, 237, 1)",
     backgroundOverlay: "rgba(209, 215, 205, 0.3)",

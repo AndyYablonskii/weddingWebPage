@@ -8,8 +8,8 @@ interface ColorCircleProps {
 }
 
 const colorPalette = [
-    COLORS.secondary,
     COLORS.primary,
+    COLORS.tertiary,
     COLORS.accent,
     COLORS.lightText,
     COLORS.darkBrown,
