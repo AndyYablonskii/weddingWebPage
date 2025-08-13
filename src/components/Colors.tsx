@@ -31,6 +31,7 @@ const titleStyle: React.CSSProperties = {
     color: COLORS.primary,
     fontSize: '35px',
     paddingTop: '46px',
+    fontFamily: 'var(--font-heading)'
 };
 
 const rectangleMobileStyle: React.CSSProperties = {
@@ -50,7 +51,9 @@ const requestStyle: React.CSSProperties = {
     justifyContent: 'center',
     paddingTop: '24px',
     color: COLORS.secondary,
-    fontSize: '16px'
+    fontSize: '16px',
+    fontFamily: 'var(--font-body)',
+    textAlign: 'center'
 };
 
 const colorsContainerStyle: React.CSSProperties = {
@@ -95,7 +98,7 @@ export const Colors: React.FC = () => {
                 </div>
 
                 <span className="request" style={requestStyle}>
-                    Просимо підтримати кольорову гамму нашого весілля
+                    Просимо підтримати кольорову гамму <br /> нашого весілля
                 </span>
 
                 <div className="addGaps" style={colorsContainerStyle}>

@@ -11,35 +11,42 @@ interface FAQItem {
 const faqData: FAQItem[] = [
     {
         id: 'panel1',
-        question: 'Is there a free trial available?',
-        answer: 'Yes, you can try us for free for 30 days. If you want, we\'ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.'
+        question: 'Яке дрес-код на весілля?',
+        answer: 'Просимо дотримуватися елегантного стилю одягу. Кольорова гамма нашого весілля: зелені, бежеві та світлі відтінки. Уникайте білого кольору, будь ласка.'
     },
     {
         id: 'panel2',
-        question: 'Can I change my plan later?',
-        answer: 'Of course! Our service was built with your business in mind. As your business grows, you can upgrade your plan at any time.'
+        question: 'Чи потрібно підтверджувати свою присутність?',
+        answer: 'Так, будь ласка, підтвердіть свою присутність до 1 вересня 2025 року. Це допоможе нам краще організувати захід та підготувати достатньо місць для всіх гостей.'
     },
     {
         id: 'panel3',
-        question: 'What is your cancellation policy?',
-        answer: 'We understand that things change. You can cancel your plan at any time and we\'ll refund you the difference already paid.'
+        question: 'Де відбудеться весілля?',
+        answer: 'І церемонія вінчання, і бенкет відбудуться в одному місці - Дім молитви с. Хутори. Це зручно для всіх гостей, адже не потрібно переїжджати з одного місця в інше.'
     },
     {
         id: 'panel4',
-        question: 'Can other info be added to an invoice?',
-        answer: 'Yes, you can add custom fields to your invoices including tax information, purchase order numbers, and other business details.'
+        question: 'О котрій годині почнеться захід?',
+        answer: 'Церемонія вінчання розпочнеться о 14:00. Рекомендуємо прибути за 15-20 хвилин до початку. Бенкет триватиме з 14:00 до 20:00.'
     },
     {
         id: 'panel5',
-        question: 'How does billing work?',
-        answer: 'Plans are per workspace, not per account. You can upgrade one workspace, and still have any number of free workspaces.'
+        question: 'Чи будуть діти на весіллі?',
+        answer: 'Так, діти вітаються на нашому весіллі! Ми будемо раді бачити всю вашу родину. Просимо лише врахувати це при підтвердженні присутності.'
     },
     {
         id: 'panel6',
-        question: 'How do I change my account email?',
-        answer: 'You can change your account email from your profile settings. Go to Account Settings > Profile > Email Address to update it.'
+        question: 'Що подарувати молодятам?',
+        answer: 'Найкращий подарунок для нас - ваша присутність на цьому особливому дні. Якщо ви хочете зробити подарунок, будемо вдячні за будь-який внесок у наше спільне майбутне.'
     }
 ];
+
+const faqContainerStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    backgroundColor: COLORS.background
+};
 
 const containerStyle: React.CSSProperties = {
     backgroundColor: COLORS.background,
@@ -47,6 +54,10 @@ const containerStyle: React.CSSProperties = {
     paddingBottom: '60px',
     paddingLeft: '20px',
     paddingRight: '20px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100%',
     maxWidth: '800px',
     margin: '0 auto'
 };
@@ -57,7 +68,7 @@ const titleStyle: React.CSSProperties = {
     textAlign: 'center',
     color: COLORS.primary,
     marginBottom: '16px',
-    fontFamily: 'var(--font-body)'
+    fontFamily: 'var(--font-body)',
 };
 
 const dividerStyle: React.CSSProperties = {
@@ -70,7 +81,9 @@ const dividerStyle: React.CSSProperties = {
 
 const faqItemStyle: React.CSSProperties = {
     borderBottom: `1px solid rgba(0, 0, 0, 0.1)`,
-    marginBottom: '0'
+    marginBottom: '0',
+    width: '100%',
+    maxWidth: '600px',
 };
 
 const questionButtonStyle: React.CSSProperties = {
@@ -113,15 +126,26 @@ const answerStyle: React.CSSProperties = {
     fontFamily: 'var(--font-body)'
 };
 
+const faqItemsContainerStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100%',
+    gap: '0'
+};
+
 const mobileStyles = `
   @media (max-width: 768px) {
     .faq-container {
       padding-left: 16px !important;
       padding-right: 16px !important;
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
     }
     
     .faq-title {
       font-size: 32px !important;
+      margin-bottom: 12px !important;
     }
     
     .faq-question {
@@ -131,6 +155,11 @@ const mobileStyles = `
     
     .faq-answer {
       font-size: 14px !important;
+      padding-bottom: 20px !important;
+    }
+    
+    .faq-item {
+      max-width: 100% !important;
     }
     
     .faq-icon {
@@ -149,18 +178,18 @@ export const FAQ: React.FC = () => {
     };
 
     return (
-        <>
+        <div className="faqContainer" style={faqContainerStyle}>
             <style>{mobileStyles}</style>
             <div className="faq-container" style={containerStyle}>
                 <h2 className="faq-title" style={titleStyle}>FAQ</h2>
                 <div style={dividerStyle} />
 
-                <div>
+                <div className="faq-items" style={faqItemsContainerStyle}>
                     {faqData.map((item) => {
                         const isExpanded = expandedItem === item.id;
 
                         return (
-                            <div key={item.id} style={faqItemStyle}>
+                            <div key={item.id} className="faq-item" style={faqItemStyle}>
                                 <button
                                     className="faq-question"
                                     style={questionButtonStyle}
@@ -188,6 +217,6 @@ export const FAQ: React.FC = () => {
                     })}
                 </div>
             </div>
-        </>
+        </div>
     );
 };

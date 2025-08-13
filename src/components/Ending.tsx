@@ -10,7 +10,8 @@ const containerStyle: React.CSSProperties = {
     backgroundColor: COLORS.background,
     color: COLORS.secondary,
     paddingTop: '64px',
-    paddingBottom: '64px'
+    paddingBottom: '64px',
+    fontFamily: 'var(--font-body)'
 };
 
 export const Ending: React.FC = () => {

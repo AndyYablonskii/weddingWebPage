@@ -66,17 +66,31 @@ export const Timer: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Check if timer has ended (all values are "00")
+  const hasEnded = timeLeft.days === "00" &&
+    timeLeft.hours === "00" &&
+    timeLeft.minutes === "00" &&
+    timeLeft.seconds === "00";
+
   return (
     <>
       <style>{timerStyles}</style>
       <div className="timer-container" style={containerStyle}>
-        <div className="timer-title" style={titleStyle}>
-          OUR FOREVER<br />BEGINS IN
-        </div>
-        <div className="timer-value" style={valueStyle}>
-          {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
-        </div>
-        <div className="timer-labels" style={labelsStyle} />
+        {hasEnded ? (
+          <div className="timer-title" style={titleStyle}>
+            OUR FOREVER BEGINS TODAY
+          </div>
+        ) : (
+          <>
+            <div className="timer-title" style={titleStyle}>
+              OUR FOREVER<br />BEGINS IN
+            </div>
+            <div className="timer-value" style={valueStyle}>
+              {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
+            </div>
+            <div className="timer-labels" style={labelsStyle} />
+          </>
+        )}
       </div>
     </>
   );

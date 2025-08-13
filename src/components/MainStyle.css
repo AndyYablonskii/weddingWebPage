@@ -1,32 +1,38 @@
-.Invite {
-    font-family: var(--font-heading);
+.events-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
-.ractangleDesktop {
-    display: none !important;
+.event-container {
+    width: 100%;
 }
 
-.ractangleMobile {
-    /* Default mobile styles */
-}
-
-.backgroundImg {
-    /* Background image container */
-}
-
-/* Mobile first responsive breakpoints */
-@media (max-width: 600px) {
-    .ractangleDesktop {
-        display: none !important;
-    }
-}
-
-@media (min-width: 992px) {
-    .ractangleDesktop {
-        display: flex !important;
+/* Desktop styles */
+@media (min-width: 768px) {
+    .events-wrapper {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 20px;
     }
     
-    .ractangleMobile {
-        display: none !important;
+    .event-container {
+        flex: 1;
+        max-width: 500px;
+    }
+}
+
+/* Mobile styles - ensure proper stacking */
+@media (max-width: 767px) {
+    .events-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .event-container {
+        width: 100%;
     }
 }

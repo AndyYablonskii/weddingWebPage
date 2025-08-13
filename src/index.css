@@ -1,10 +1,10 @@
 /* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* CSS Custom Properties for Font Management */
 :root {
   /* Font Family Variables */
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: 'Playfair Display', 'Comic Sans MS', serif;
   --font-body: 'Playfair Display', serif;
   --font-hero: 'Playfair Display', serif;
   --font-accent: 'Playfair Display', serif;
