@@ -22,7 +22,7 @@ const scheduleHeadingStyle: React.CSSProperties = {
     justifySelf: 'center',
     paddingTop: '85px',
     fontSize: '35px',
-    fontWeight: 400,
+    fontWeight: 700,
     color: COLORS.primary
 };
 
@@ -49,23 +49,24 @@ const eventIconStyle: React.CSSProperties = {
 };
 
 const eventTitleStyle: React.CSSProperties = {
-    fontSize: '30px',
+    fontSize: '26px',
     paddingLeft: '12px',
     paddingTop: '28px',
     color: COLORS.primary,
+    fontWeight: 600,
 };
 
 const eventDetailsStyle: React.CSSProperties = {
     paddingLeft: '68px',
     paddingTop: '17px',
-    fontSize: '16px',
+    fontSize: '22px',
     color: COLORS.primary,
 };
 
 const eventTimeStyle: React.CSSProperties = {
     paddingLeft: '68px',
     paddingTop: '16px',
-    fontSize: '16px',
+    fontSize: '22px',
     color: COLORS.primary,
 };
 
