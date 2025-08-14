@@ -170,10 +170,10 @@ const Event: React.FC<EventProps> = ({
 const createGoogleCalendarEvent = () => {
     const url = new URL("https://calendar.google.com/calendar/render");
     url.searchParams.set("action", "TEMPLATE");
-    url.searchParams.set("text", "Наше весілля 💍");
-    url.searchParams.set("details", "Запрошуємо вас розділити з нами цей особливий день!");
+    url.searchParams.set("text", "Andrew and Sophia Wedding 🤵‍♂️👰‍♀️");
+    url.searchParams.set("details", "Запрошуємо вас розділити з нами цей особливий день! Наше вінчання почнеться о 13:00, а відбудеться в Домі Молитви с.Хутори. Весільний бенкет почнеться о 17:00 в ресторані «Резиденція». До зустрічі! 🤵‍♂️&👰‍♀️ ");
     url.searchParams.set("location", "пров.Шкільний 2а, с.Хутори");
-    url.searchParams.set("dates", "20251004T140000Z/20251004T170000Z");
+    url.searchParams.set("dates", "20251004T130000Z/20251004T210000Z");
     window.open(url.toString(), "_blank");
 };
 
@@ -192,8 +192,8 @@ export const Main = () => {
             iconAlt: "Dinner reception icon",
             title: "Бенкет",
             location: LOCATIONS.reception,
-            time: "14:00-20:00",
-            mapsUrl: LOCATIONS.mapsUrl,
+            time: "17:00-21:00",
+            mapsUrl: LOCATIONS.mapsRestaurantUrl,
         },
     ];
 

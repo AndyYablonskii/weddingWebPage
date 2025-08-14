@@ -14,6 +14,7 @@ export const App: React.FC = () => {
       <Main />
       <Colors />
       <History />
+      {/* <Carousel /> */}
       <FAQ />
       <Timer />
       <Ending />

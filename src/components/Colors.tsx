@@ -77,13 +77,6 @@ const ColorCircle: React.FC<ColorCircleProps> = ({ color }) => (
 export const Colors: React.FC = () => {
     return (
         <>
-            <img
-                className="hideImg"
-                style={imageStyle}
-                src={Img}
-                alt="Wedding colors inspiration"
-            />
-
             <div style={containerStyle}>
                 <div className="title" style={titleStyle}>
                     Кольорова гамма

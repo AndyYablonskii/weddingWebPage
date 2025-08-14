@@ -16,6 +16,7 @@ export const COLORS = {
 
 export const LOCATIONS = {
     ceremony: "Дім молитви с. Хутори",
-    reception: "Дім молитви с. Хутори",
+    reception: "Ресторан «Резиденція»",
     mapsUrl: "https://maps.app.goo.gl/QZ4FVSDMwn6dAHWj8",
+    mapsRestaurantUrl: "https://maps.app.goo.gl/ULeS4LLB4yxZukcS9",
 } as const;
