@@ -9,35 +9,65 @@ interface FAQItem {
 }
 
 const faqData: FAQItem[] = [
+    // {
+    //     id: 'panel1',
+    //     question: 'Яке дрес-код на весілля?',
+    //     answer: 'Просимо дотримуватися елегантного стилю одягу. Кольорова гамма нашого весілля: зелені, бежеві та світлі відтінки. Уникайте білого кольору, будь ласка.'
+    // },
+    // {
+    //     id: 'panel2',
+    //     question: 'Чи потрібно підтверджувати свою присутність?',
+    //     answer: 'Так, будь ласка, підтвердіть свою присутність до 1 вересня 2025 року. Це допоможе нам краще організувати захід та підготувати достатньо місць для всіх гостей.'
+    // },
+    // {
+    //     id: 'panel3',
+    //     question: 'Де відбудеться весілля?',
+    //     answer: 'І церемонія вінчання, і бенкет відбудуться в одному місці - Дім молитви с. Хутори. Це зручно для всіх гостей, адже не потрібно переїжджати з одного місця в інше.'
+    // },
+    // {
+    //     id: 'panel4',
+    //     question: 'О котрій годині почнеться захід?',
+    //     answer: 'Церемонія вінчання розпочнеться о 14:00. Рекомендуємо прибути за 15-20 хвилин до початку. Бенкет триватиме з 14:00 до 20:00.'
+    // },
+    // {
+    //     id: 'panel5',
+    //     question: 'Чи будуть діти на весіллі?',
+    //     answer: 'Так, діти вітаються на нашому весіллі! Ми будемо раді бачити всю вашу родину. Просимо лише врахувати це при підтвердженні присутності.'
+    // },
+    // {
+    //     id: 'panel6',
+    //     question: 'Що подарувати молодятам?',
+    //     answer: 'Найкращий подарунок для нас - ваша присутність на цьому особливому дні. Якщо ви хочете зробити подарунок, будемо вдячні за будь-який внесок у наше спільне майбутне.'
+    // },
     {
         id: 'panel1',
-        question: 'Яке дрес-код на весілля?',
-        answer: 'Просимо дотримуватися елегантного стилю одягу. Кольорова гамма нашого весілля: зелені, бежеві та світлі відтінки. Уникайте білого кольору, будь ласка.'
+        question: 'Lorem Imsum...',
+        answer: 'Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... '
     },
     {
         id: 'panel2',
-        question: 'Чи потрібно підтверджувати свою присутність?',
-        answer: 'Так, будь ласка, підтвердіть свою присутність до 1 вересня 2025 року. Це допоможе нам краще організувати захід та підготувати достатньо місць для всіх гостей.'
+        question: 'Lorem Imsum...',
+        answer: 'Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... '
     },
     {
         id: 'panel3',
-        question: 'Де відбудеться весілля?',
-        answer: 'І церемонія вінчання, і бенкет відбудуться в одному місці - Дім молитви с. Хутори. Це зручно для всіх гостей, адже не потрібно переїжджати з одного місця в інше.'
+        question: 'Lorem Imsum...',
+        answer: 'Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... '
     },
     {
         id: 'panel4',
-        question: 'О котрій годині почнеться захід?',
-        answer: 'Церемонія вінчання розпочнеться о 14:00. Рекомендуємо прибути за 15-20 хвилин до початку. Бенкет триватиме з 14:00 до 20:00.'
+        question: 'Lorem Imsum...',
+        answer: 'Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... '
     },
     {
         id: 'panel5',
-        question: 'Чи будуть діти на весіллі?',
-        answer: 'Так, діти вітаються на нашому весіллі! Ми будемо раді бачити всю вашу родину. Просимо лише врахувати це при підтвердженні присутності.'
+        question: 'Lorem Imsum...',
+        answer: 'Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... '
     },
     {
         id: 'panel6',
-        question: 'Що подарувати молодятам?',
-        answer: 'Найкращий подарунок для нас - ваша присутність на цьому особливому дні. Якщо ви хочете зробити подарунок, будемо вдячні за будь-який внесок у наше спільне майбутне.'
+        question: 'Lorem Imsum...',
+        answer: 'Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... Lorem Ipsum... '
     }
 ];
 
