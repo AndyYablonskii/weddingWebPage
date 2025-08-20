@@ -27,7 +27,7 @@ export const App: React.FC = () => {
         // {src: '/assets/carousel/9.png', alt: 'carousel 9'},
         {src: '/assets/carousel/11.png', alt: 'carousel 11'},
         {src: '/assets/carousel/14.png', alt: 'carousel 14'},
-        {src: '/assets/carousel/12.png', alt: 'carousel 12'},
+        // {src: '/assets/carousel/12.png', alt: 'carousel 12'},
         {src: '/assets/carousel/24.png', alt: 'carousel 24'},
         // { src: '/assets/carousel/21.png', alt: 'carousel 21' },
         {src: '/assets/carousel/17.png', alt: 'carousel 17'},

@@ -1,6 +1,7 @@
 import React from "react";
 import { COLORS } from "../constants/index.ts";
 import "./History.css";
+import SloppyHeart from "../assets/sloppy-heart.png";
 
 const containerStyle: React.CSSProperties = {
     backgroundColor: COLORS.primary,
@@ -79,6 +80,14 @@ export const History: React.FC = () => {
                 <div style={{ marginTop: '10px'}}>
                     Ось так Бог написав нашу історію. <br /> Відтепер тільки разом та тільки вперед.
                 </div>
+
+                <img
+                    src={SloppyHeart}
+                    alt={"sloppy heart"}
+                    loading="lazy"
+                    style={{ width: '60px', height: '60px', margin: '0 auto', marginTop: '20px' }}
+                />
+
             </div>
         </div>
     );

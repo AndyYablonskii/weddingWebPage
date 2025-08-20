@@ -25,7 +25,7 @@ export const PreMain: React.FC = () => {
       </div> */}
       <div style={containerStyle}>
         <div>
-          На особливі події запрошують особливих людей. <br />
+          На особливі події запрошують <br /> особливих людей. <br />
           Ми неймовірно щасливі запросити вас на наше довгоочікуване весілля!
         </div>
         <div style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '2px', marginBottom: '2px' }}>04.10.25</div>
