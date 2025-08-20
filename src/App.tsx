@@ -40,10 +40,10 @@ export const App: React.FC = () => {
         // { src: '/assets/carousel/24.png', alt: 'carousel 24' },
         // { src: '/assets/carousel/20.png', alt: 'carousel 20' },
         { src: '/assets/carousel/22.png', alt: 'carousel 22' },
-        { src: '/assets/carousel/image1.png', alt: 'image1' },
-        { src: '/assets/carousel/image2.png', alt: 'image2' },
-        { src: '/assets/carousel/image3.png', alt: 'image3' },
-        { src: '/assets/carousel/image4.png', alt: 'image4' },
+        // { src: '/assets/carousel/image1.png', alt: 'image1' },
+        // { src: '/assets/carousel/image2.png', alt: 'image2' },
+        // { src: '/assets/carousel/image3.png', alt: 'image3' },
+        // { src: '/assets/carousel/image4.png', alt: 'image4' },
       ]}/>
       <FAQ />
       <Timer />
