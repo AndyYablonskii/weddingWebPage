@@ -19,11 +19,13 @@ const backgroundImageStyle: React.CSSProperties = {
 
 const scheduleHeadingStyle: React.CSSProperties = {
     display: 'flex',
-    justifySelf: 'center',
+    justifyContent: 'center',
+    width: '100%',
     paddingTop: '85px',
     fontSize: '35px',
     fontWeight: 700,
-    color: COLORS.primary
+    color: COLORS.primary,
+    textAlign: 'center'
 };
 
 const rectangleLineStyle: React.CSSProperties = {
