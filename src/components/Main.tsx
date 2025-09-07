@@ -187,7 +187,7 @@ export const Main = () => {
             iconAlt: "Church ceremony icon",
             title: "Церемонія вінчання",
             location: LOCATIONS.ceremony,
-            time: "14:00",
+            time: "13:00",
             mapsUrl: LOCATIONS.mapsUrl,
         },
         {
